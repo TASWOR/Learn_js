@@ -1,0 +1,38 @@
+﻿<!--
+    constructor - свойство, которое хранит ссылку на функцию-конструктор, через которую был создан объект.
+-->
+
+<html>
+<head>
+    <title>Свойство constructor</title>
+
+    <script type="text/javascript">
+
+        var object = new Object();
+        var date = new Date();
+        var array = new Array(10);
+        var string = new String("516");
+        var func= new Function("x","y","return x+y");
+
+        function Sum(x,y){
+            this.x=x;
+            this.y=y;
+        }
+        var treug = new Sum(5,7);
+        function info(obj,name){
+            return document.write(" Мы используем тип " + name + " и он имеет обьект " + obj.constructor + "<hr>")
+        }
+        info(object,"object");
+        info(date,"date");
+        info(array,"array");
+        info(string,"string");
+        info(func,"func");
+        info(treug,"treug");
+        var a = new Date.constructor();
+        document.write(a)
+    </script>
+
+</head>
+<body>
+</body>
+</html>

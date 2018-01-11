@@ -1,0 +1,27 @@
+﻿<!--
+
+Напишите программу, которая будет рассчитывать и выводить на экран количество возможных вариантов доставки товара.
+ Для решения задачи, используйте факториал N!, рассчитываемый с помощью цикла do-while.
+
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+
+        var a1 = prompt("Введите сколько товаров нужно доставить");
+        var a=parseInt(a1);
+        var fakt=1;
+        do{
+            fakt*=a;
+            a--
+        }
+        while(a>1)
+        document.write(fakt);
+    </script>
+
+</head>
+<body>
+</body>
+</html>

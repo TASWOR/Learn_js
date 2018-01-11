@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Использование конструктора Object</title>
+</head>
+<body>
+    <script>
+        // пустой объект
+        var user = new Object();
+        user.name = "Edward";
+        user.password="12345";
+        user.info = function () {
+            return "Name " + this.name + " Password " + this.password;
+        }
+    </script>
+</body>
+</html>

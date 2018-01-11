@@ -1,0 +1,27 @@
+﻿<!--
+Дан массив с числами. Проверьте, что в этом массиве есть число 5. Если есть - выведите 'да', а если нет - выведите 'нет'.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+    var array=[1,4,7,8,5];
+    var flag = false;
+    for (var i =0;i<array.length;i++){
+        if(array[i]===5){
+            flag = true;
+            break;
+        }
+    }
+    if(flag===true){
+        document.write("Да");
+    }
+    else{
+        document.write("Нет");
+    }
+    </script>
+</head>
+<body>
+</body>
+</html>

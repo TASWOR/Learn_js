@@ -1,0 +1,38 @@
+﻿<!--
+
+В данном Объекте создать два свойства которые принимают либо два числа, массива или объекта.
+Два свойства заполняет сам пользователь. То есть нужно изменить тип данных и поместить данные в виде массива или же числа.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+    function oper(x,y){
+        if(typeof x=="object"){
+            x=x.join("");
+
+        }
+        else{
+            x = x.split("");
+
+        }
+        if(typeof y=="object"){
+            y=y.join("");
+
+        }
+        else {
+            y=y.split("");
+
+        }
+        return x + "</br>" + y;
+    }
+    var arr=[5,4,7,8];
+    var arra="6592";
+        document.write(oper(arr,arra));
+    </script>
+
+</head>
+<body>
+</body>
+</html>

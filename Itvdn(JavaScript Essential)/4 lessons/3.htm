@@ -1,0 +1,42 @@
+﻿<!--
+Напишите функцию, которая будет принимать число и определять:
+1. Является ли введенное число положительным или отрицательным.
+2. Является ли оно простым
+3. Делится ли оно на 2, 5, 3, 6, 9 без остатка
+
+
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+
+        function oper(x) {
+            if(x>0){
+                document.write("Число положительное <hr>")
+            }
+            else {
+                document.write("Число отрицательное<hr>")
+            }
+            var arr=[2,5,3,6,9];
+            var res ="";
+            for (var i=0;i<arr.length;i++){
+                if(x%arr[i]==0){
+                    document.write(arr[i] + " Делится без остатка </br>")
+                }
+                else{
+                    document.write(arr[i] + " Делится с остатком </br>")
+                }
+            }
+
+        }
+        var a1= prompt("Введите число");
+        var a=parseInt(a1);
+        oper(a);
+    </script>
+
+</head>
+<body>
+</body>
+</html>

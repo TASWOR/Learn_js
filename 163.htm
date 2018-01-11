@@ -1,0 +1,22 @@
+﻿<!--
+ Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function getDigitsSum(x){
+            x = String(x);
+            var res=0;
+            for(var i=0;i<x.length;i++){
+                res+=parseInt(x[i]);
+            }
+            return res;
+        }
+        document.write(getDigitsSum(1232))
+    </script>
+</head>
+<body>
+</body>
+</html>

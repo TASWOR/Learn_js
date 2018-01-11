@@ -1,0 +1,26 @@
+﻿<!--
+Дана строка. Сделайте заглавным первый символ каждого слова этой строки.
+Для этого сделайте вспомогательную функцию ucfirst,
+которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var str = "hello world";
+        var arr=[];
+        str = str.split(" ");
+        for (var i=0;i<str.length;i++){
+            arr.push(ucfirst(str[i]))
+        }
+        arrs=arr.join(" ")
+        function ucfirst(x) {
+        return x.substring(0,1).toUpperCase() + str[i].substring(1);
+        }
+        document.write(arrs);
+    </script>
+</head>
+<body>
+</body>
+</html>

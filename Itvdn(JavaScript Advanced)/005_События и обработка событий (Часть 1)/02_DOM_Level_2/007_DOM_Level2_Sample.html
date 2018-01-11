@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Пример использования событий DOM Level 2</title>
+    <style>
+        #wrapper p {
+            width:100px;
+            height:100px;
+            background-color:green;
+            float:left;
+            margin:10px;
+        }
+    </style>
+
+    <script>
+
+        window.addEventListener("load",function () {
+            document.getElementById("wrapper").addEventListener("click",function (e) {
+                if(e.target.style.backgroundColor==="red"){
+                    e.target.style.backgroundColor="green"
+                }
+                else {
+                    e.target.style.backgroundColor = "red";
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

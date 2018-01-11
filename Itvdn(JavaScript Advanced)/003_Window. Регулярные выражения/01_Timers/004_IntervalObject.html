@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>setInterval and clearInterval</title>
+    <script>
+       window.onload=function () {
+           var counter=0;
+           var timer;
+           function counters() {
+               get("output").innerHTML=counter;
+               counter++;
+           }
+           get("startButton").onclick=function () {
+               timer = setInterval(counters,100)
+           };
+           get("stopButton").onclick=function () {
+               clearInterval(timer);
+           };
+           get("reset").onclick=function () {
+               counter=0;
+           };
+
+           function get(id) {
+               return document.getElementById(id);
+           }
+       }
+
+    </script>
+</head>
+<body>
+    <p id="output">-</p>
+    <input id="startButton" type="button" value="Start" />
+    <input id="stopButton" type="button" value="Stop" />
+    <input id="reset" type="button" value="Reset" />
+</body>
+</html>

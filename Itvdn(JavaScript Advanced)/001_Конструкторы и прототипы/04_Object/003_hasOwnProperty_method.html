@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод hasOwnProperty</title>
+
+    <script type="text/javascript">
+        function Treug(x,y) {
+            this.x=x;
+            this.y=y;
+        }
+        Treug.prototype.name="Treug";
+        var a = new Treug(5,41);
+        document.write("hasOwnProperty по х = " + a.hasOwnProperty("x") + "<hr>");
+        document.write("hasOwnProperty по name = " + a.hasOwnProperty("name") + "<hr>")
+        document.write("hasOwnProperty в прототипе по х = " +("x" in a)  + "<hr>");
+        document.write("hasOwnProperty в прототипе по name = " + ("name" in a) + "<hr>");
+        document.write("hasOwnProperty в прототипе по dada = " +("dada" in a));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!--
+Разработайте функцию-конструктор, которая будет создавать объект Human
+(человек), добавьте на свое усмотрение свойства и методы в этот объект. Подумайте,
+какие методы и свойства следует сделать уровня экземпляра, а какие уровня функции-конструктора.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function Human(age,name) {
+            this.age=age;
+            this.name=name;
+        }
+        Human.prototype.info=function () {
+            return "Мое имя " + this.name + " я имею " + this.age + " годиков";
+        }
+        var junior = new Human(22,"Polina");
+        document.write(junior.info());
+    </script>
+
+</head>
+<body>
+</body>
+</html>

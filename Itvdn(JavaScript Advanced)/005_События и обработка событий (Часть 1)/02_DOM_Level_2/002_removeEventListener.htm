@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Удаление обработчикоа DOM Level 2</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            var btn1=document.getElementById("button1");
+            var btn2=document.getElementById("button2");
+            btn1.addEventListener("click",message,false);
+            btn1.addEventListener("click",dbmessage,false);
+            btn2.addEventListener("click",reset,false);
+            function message() {
+                alert("Hi")
+            }
+            function dbmessage() {
+                alert("Bye");
+            }
+            function reset() {
+                btn1.removeEventListener("click",message,false);
+                btn1.removeEventListener("click",dbmessage,false);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="button1" type="button" value="Кнопка" />
+    <input id="button2" type="button" value="Удалить обработчик" />
+</body>
+</html>

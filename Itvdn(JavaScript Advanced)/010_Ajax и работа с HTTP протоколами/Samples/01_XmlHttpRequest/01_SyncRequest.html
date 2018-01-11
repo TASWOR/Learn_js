@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>XMLHttpRequest синхронный запрос</title>
+    <script>
+      window.onload=function () {
+          document.getElementById("btnGet").onclick=function () {
+
+              var xml = new XMLHttpRequest();
+              xml.open("GET","testfile.html",false)
+              xml.send();
+              document.getElementById("output").innerHTML+=xml.responseText;
+          }
+      }
+    </script>
+</head>
+<body>
+    <input id="btnGet" type="button" value="Get Info" />
+    <p id="output"></p>
+</body>
+</html>

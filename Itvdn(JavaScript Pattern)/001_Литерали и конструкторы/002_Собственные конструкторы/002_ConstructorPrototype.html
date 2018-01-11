@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Использование прототипа</title>
+</head>
+<body>
+    <script>
+        function People(name) {
+            this.name=name;
+        }
+        People.prototype.info=function () {
+            return document.write(this.name + "<hr>");
+        };
+        Alewa = new People("Alewa");
+        Kiril = new People("Kiril");
+        Kiril.info();
+        Alewa.info()
+    </script>
+</body>
+</html>

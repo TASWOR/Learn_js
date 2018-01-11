@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Замыкание</title>
+</head>
+<body>
+    <script>
+        function summ(x) {
+            return function (y) {
+                return x + y;
+            }
+        }
+        var a = summ(5);
+        var b = summ(10);
+        alert(a(50));
+        alert(b(4));
+    </script>
+    
+</body>
+</html>

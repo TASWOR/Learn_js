@@ -1,0 +1,30 @@
+﻿<!--
+Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел.
+ Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function isEven(x){
+            if(x%2===0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        var array=[2,1,4,8,3,1,5,6,2,1];
+        var arr=[];
+        for(var i=0;i<array.length;i++){
+            if(isEven(array[i])){
+                arr.push(array[i])
+            }
+        }
+        document.write(arr);
+    </script>
+</head>
+<body>
+</body>
+</html>

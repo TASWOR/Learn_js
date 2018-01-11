@@ -1,0 +1,35 @@
+﻿<!--
+
+Создать объект «Документ», в котором определить свойства «Заголовок, Тело, Футер, Дата».
+Создать в объекте вложенный объект – «Приложение».
+Создать в объекте «Приложение», вложенные объекты, «Заголовок, Тело, Футер, Дата».
+ Создать методы для заполнения и отображения документа.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var word= {
+            title: "title", body: "body", footer: "footer", date: "date",
+            app: {title: "title", body: "body", footer: "footer", date: "date"},
+            add: function () {
+                word.app.title = "Заголовок";
+                word.app.body = "Тело";
+                word.app.footer = "Футер";
+                word.app.date = "Дата";
+            },
+            open: function () {
+                for (all in word.app) {
+                    document.write(word.app[all] + "</br>");
+                }
+            }
+        };
+        word.add();
+        word.open()
+    </script>
+
+</head>
+<body>
+</body>
+</html>

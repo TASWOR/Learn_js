@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Функции обратного вызова</title>
+
+    <script>
+        function treug(x,y,callback) {
+            this.x=x;
+            this.y=y;
+            var res = parseInt(this.x)+parseInt(this.y)
+            callback(res);
+        }
+        function answer(res) {
+            alert("Summ = " + res)
+        }
+        treug(5,6,answer)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

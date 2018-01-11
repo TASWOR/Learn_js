@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Закрытые свойства и методы</title>
+</head>
+<body>
+    <script>
+       var obj1 ={
+           name:"Edward",
+           getname: function () {
+               return this.name;
+           }
+       };
+       document.write(obj1.name + '<hr>');
+       document.write(obj1.getname() + '<hr>');
+       var Name =function () {
+           var name = "Edward";
+           this.getName = function () {
+               return name;
+           }
+       };
+       var names = new Name();
+
+       document.write(names.name + '<hr>');
+       document.write(names.getName() + '<hr>')
+    </script>
+</body>
+</html>

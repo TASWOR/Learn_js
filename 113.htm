@@ -1,0 +1,22 @@
+﻿<!--
+ Преобразуйте первую букву каждого слова строки в верхний регистр.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var str = "makaka mawa sawa";
+        var b=str.split(" ");
+        var a = b[0].toUpperCase().slice(0,1) + b[0].slice(1);
+        var a1= b[1].toUpperCase().slice(0,1) + b[1].slice(1);
+        var a2 = b[2].toUpperCase().slice(0,1) + b[2].slice(1);
+        document.write(a + " " + a1 + " " + a2 + "<hr>");
+        for(var i=0;i<b.length;i++){
+            document.write(b[i].toUpperCase().slice(0,1) + b[i].slice(1) + "</br>")
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

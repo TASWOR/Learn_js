@@ -1,0 +1,28 @@
+﻿<!--
+Проверьте, что строка заканчивается на .html.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+      var numb ="http://localhost:3000.html";
+      numb=numb.split(".");
+      if(numb[1]=="html"){
+          document.write("Заканчивается на .html" + "<hr>")
+      }
+      else{
+          document.write("Не заканчивается на .html"+ "<hr>")
+      }
+      var numb ="http://localhost:3000.html";
+      if(numb.substring(-5)){
+          document.write("Заканчивается на .html")
+      }
+      else{
+          document.write("Не заканчивается на .html"+ "<hr>")
+      }
+    </script>
+</head>
+<body>
+</body>
+</html>

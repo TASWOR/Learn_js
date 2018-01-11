@@ -1,0 +1,52 @@
+﻿<!--
+ Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function day(x) {
+            switch (x){
+                case 1: {
+                    return "Понедельник";
+                }
+                case 2:{
+                    return "Вторник";
+                }
+                case 3:{
+                    return "Среда";
+                }
+                case 4:{
+                    return "Четверг";
+                }
+                case 5:{
+                    return "Пятница";
+                }
+                case 6:{
+                    return "Ссубота";
+                }
+                case 7:{
+                    return "Воскресенье";
+                }
+                default:{
+                    return "Такого дня в недели нету!"
+                }
+            }
+        }
+        var a1 = prompt("Введите день недели");
+        var a = parseInt(a1);
+        var res = day(a);
+        document.write(res + "<hr>");
+
+        function days(x) {
+            var array =["пн","вт","ср","чт","пт","сб","вс"];
+            return array[x-1];
+        }
+        var res = days(a);
+        document.write(res + "<hr>");
+    </script>
+</head>
+<body>
+</body>
+</html>

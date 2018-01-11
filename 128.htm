@@ -1,0 +1,19 @@
+﻿<!--
+ Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив [1, 2, 3, 'a', 'b', 'c', 4, 5]
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+      var arr1 = [1, 2, 3, 4, 5];
+      var a=arr1.splice(0,3).concat("a","b","c") + arr1.splice(-2);
+      document.write(a + "<hr>");
+      var arr2 = [1, 2, 3, 4, 5];
+      arr2.splice(3,0,"a","b","c");
+      document.write(arr2 + "<hr>");
+    </script>
+</head>
+<body>
+</body>
+</html>

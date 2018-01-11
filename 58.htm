@@ -1,0 +1,28 @@
+﻿<!--
+ В переменной day лежит какое-то число из интервала от 1 до 31.
+ Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+ -->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+      var x1= prompt("Введите день месяца");
+      var day = parseInt(x1);
+      if(day>=1&&day<=11){
+          document.write("Первая декада");
+      }
+      else if(day>=11&&day<=21){
+          document.write("Вторая декада");
+      }
+      else if(day>=21&&day<=31){
+          document.write("Третья декада");
+      }
+      else{
+          document.write("Такого числа нету в месяце!")
+      }
+    </script>
+</head>
+<body>
+</body>
+</html>

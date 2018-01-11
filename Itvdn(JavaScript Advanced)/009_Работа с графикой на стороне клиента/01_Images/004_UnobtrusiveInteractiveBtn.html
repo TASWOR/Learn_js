@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ненавязчивая смена изображения</title>
+    <script>
+
+        window.onload=function () {
+            newImg("btn","images/frame2.jpg");
+            newImg("btn2","images/frame1.jpg")
+        };
+        function newImg(id,newImg) {
+            var e = document.getElementById(id);
+            if(e.tagName.toLowerCase()!=="img"){
+                return;
+            }
+            else{
+                new Image().src=newImg;
+                var oldImg =e.src;
+                e.addEventListener("mouseover",function () {
+                    this.src=newImg;
+                });
+                e.addEventListener("mouseout",function () {
+                    this.src=oldImg;
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+<img id="btn" src="images/frame1.jpg" />
+<img id="btn2" src="images/frame2.jpg" />
+</body>
+</html>

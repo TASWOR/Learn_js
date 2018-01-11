@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Проверка поддержки Canvas</title>
+    <script>
+
+      function yesCanvas() {
+          return !!document.createElement("canvas").getContext;
+      }
+      if(yesCanvas()){
+          document.write("Канвас поддерживается");
+      }
+      else{
+          document.write("Канвас не поддерживается")
+      }
+    </script>
+</head>
+<body>
+</body>
+</html>

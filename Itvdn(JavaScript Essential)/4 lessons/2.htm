@@ -1,0 +1,40 @@
+﻿<!--
+
+Создайте четыре функции для арифметических действий: (Add – сложение, Sub – вычитание, Mul – умножение, Div – деление).
+Каждая функция должна принимать два параметра и выводить на экран результат вычисления.
+Функция деления должна делать проверку деления на ноль. Пользователь вводит значения, над которыми хочет произвести операцию и выбрать саму операцию.
+
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+    function add(x,y) {
+        return x+y;
+    }
+    function sub(x,y) {
+        return x-y
+    }
+    function mul(x,y) {
+       return x*y
+    }
+    function div(x,y) {
+        if(y==0){
+            return "Делить на ноль нельзя"
+        }
+        else{
+            return x/y
+        }
+    }
+    document.write(add(2,5) +"<hr>");
+    document.write(sub(2,5) +"<hr>");
+    document.write(mul(2,5) +"<hr>");
+    document.write(div(4,2) +"<hr>");
+    document.write(div(2,0) +"<hr>");
+    </script>
+
+</head>
+<body>
+</body>
+</html>

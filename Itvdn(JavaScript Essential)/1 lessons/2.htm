@@ -1,0 +1,41 @@
+﻿<!--
+
+Создайте 3 переменные   x = 6, y = 15, и z = 4:
+Выполните и отобразите результат следующих операций для этих переменных:
+· x += y - x++ * z ;
+· z = -- x - y * 5 ;
+· y /= x + 5 % z ;
+· z = x++ + y * 5 ;
+· x = y - x++ * z ;
+
+
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+
+        var x=6;
+        var y=15;
+        var z=4;
+        x += y - x++ * z;
+        document.write(x + "<hr>");
+        var x=6;
+        z = -- x - y * 5 ;
+        document.write(z + "<hr>");
+        var z=4;
+        y /= x + 5 % z ;
+        document.write(y + "<hr>");
+        var y=15;
+        z = x++ + y * 5 ;
+        document.write(z + "<hr>");
+        var z=4;
+        x = y - x++ * z ;
+        document.write(x + "<hr>");
+    </script>
+
+</head>
+<body>
+</body>
+</html>

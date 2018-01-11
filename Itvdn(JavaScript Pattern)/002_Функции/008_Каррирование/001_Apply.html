@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Применение функций - apply и call</title>
+    <script>
+        window.onload = function () {
+
+           var person = {
+               name:"Ivan",
+               fname : "Ivanov"
+           };
+           function add(color,counter) {
+               var output = document.getElementById("output");
+               output.style.color=color;
+               for(var i =0;i<counter;i++){
+                   output.innerHTML+= "Hi " + this.name + "</br>";
+               }
+           }
+            add.call(person,"red",5)
+            // Метод call аналогичен методу apply за исключением того, что аргументы передаются не массивом, а отдельными параметрами.
+        }
+    </script>
+</head>
+<body>
+    <p id="output">
+    </p>
+</body>
+</html>

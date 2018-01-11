@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Смена изображений</title>
+    <script>
+        window.onload=function () {
+            var flag;
+            function getId(id) {
+                return document.getElementById(id);
+            }
+            getId("changeBtn").onclick=function () {
+                if (flag) {
+                    getId("imgBtn").src = "images/button-hover.jpg";
+                }
+                else{
+                    getId("imgBtn").src="images/button.jpg";
+                }
+                flag=!flag;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="imgBtn" src="images/button.jpg" alt="Button" />
+    <button id="changeBtn">Change</button>
+</body>
+</html>

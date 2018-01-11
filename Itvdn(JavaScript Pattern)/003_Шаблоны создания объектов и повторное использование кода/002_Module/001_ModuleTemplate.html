@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Шаблон модуль</title>
+</head>
+<body>
+<!--Сценарий для создания пространства имен-->
+<script>
+    var App = App || {};
+    App.define=function (namespace) {
+        var inf = App;
+        var all = namespace.split(".");
+        if(all[0]==="App"){
+            all = all.slice(1);
+        }
+        for(var i=0;i<all.length;i++){
+            if(typeof inf[all[i]]==="undefined"){
+                inf[all[i]] = {};
+            }
+            inf = inf[all[i]];
+        }
+        return inf
+    }
+</script>
+<script>
+    // определяем пространство имен
+    App.define("sum.all");
+    App.sum.all=(function () {
+        var x,y;
+        return{
+            getX:function (val) {
+                x = val;
+            },
+            getY:function (val) {
+                y = val;
+            },
+            getAll:function () {
+                return x+y;
+            }
+        }
+    })()
+</script>
+
+<script>
+    (function () {
+        var calc=App.sum.all;
+        calc.getX(550);
+        calc.getY(450);
+        document.write(calc.getAll())
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Функция-конструктор Rectangle</title>
+
+    <script type="text/javascript">
+
+        function Summ(x,y){
+            this.x=x;
+            this.y=y;
+            this.sum = function () {
+                return this.x+this.y;
+            }
+        }
+        var kvad = new Summ(10,15);
+        document.write(kvad.sum() + "<hr>");
+        var ps = new Summ(5,50);
+        document.write(ps.sum() + "<hr>");
+    </script>
+
+</head>
+<body>
+</body>
+</html>

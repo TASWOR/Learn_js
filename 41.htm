@@ -1,0 +1,31 @@
+﻿<!--
+ В переменной min лежит число от 0 до 59.
+ Определите в какую четверть часа попадает это число (в первую, вторую, третью или четвертую).
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+       var min1 =prompt("Введите число");
+       var min = parseInt(min1);
+       if (min>=0&&min<=15){
+           document.write("Лежит в первой четверти");
+       }
+       else if(min>=16&&min<=30){
+           document.write("Лежит во второй четверти");
+       }
+       else if(min>=31&&min<=45){
+           document.write("Лежит в третий четверти");
+       }
+       else if(min>=46&&min<=60){
+           document.write("Лежит в четвертой четверти");
+       }
+       else {
+           document.write("Число меньше 0")
+       }
+    </script>
+</head>
+<body>
+</body>
+</html>

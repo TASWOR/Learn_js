@@ -1,0 +1,40 @@
+﻿<!--
+
+Разработайте страницу регистрации нового пользователя. Форма должна получать от пользователя следующие данные:
+имя, фамилия, логин, пароль, подтверждение пароля, email, пол (мужчина/женщина).
+Форма должна проверять:
+1) Все поля вводов должны быть заполнены.
+2) Пароль и подтверждение пароля должны совпадать.
+3) Email должен быть указан в правильном формате.
+При неудовлетворении этих правил форма должна выводить сообщение об ошибке (не через alert).
+
+
+
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script src="1.js"></script>
+
+
+</head>
+<body>
+<form name="form1">
+<input name="firstname" type="text" placeholder="First Name"><br>
+<input name="lastName" type="text" placeholder="Last Name"><br>
+<input name="login" type="text" placeholder="Login"><br>
+<input name="password" type="password" placeholder="Password"><br>
+<input name="confirmationPassword" type="password" placeholder="Confirmation Password"><br>
+<input name="mail" type="email" placeholder="Mail"><br>
+    Gender
+    <select name="Gender" >
+        <option></option>
+        <option>Man</option>
+        <option>Woman</option>
+    </select><br>
+    <input type="submit" value="Отправить">
+</form>
+<p id="text"></p>
+</body>
+</html>

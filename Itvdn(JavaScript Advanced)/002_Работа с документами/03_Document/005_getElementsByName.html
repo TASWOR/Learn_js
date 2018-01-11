@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>getElementsByName</title>
+    <script type="text/javascript">
+        window.onload= function () {
+        document.getElementById("answers").onclick= function () {
+            var answer = document.getElementsByName("answer");
+            var res = "";
+            for (var i = 0; i < answer.length; i++) {
+                res += answer[i].value + " " + answer[i].checked + "\r\n";
+            }
+            alert(res);
+        }
+        }
+
+    </script>
+</head>
+<body>
+    <p>Вам есть 18?</p>
+    Да<input type="radio" name="answer" value="Да">
+    Нет<input type="radio" name="answer" value="Нет">
+    <input id="answers" type="button" value="Получить ответ">
+</body>
+</html>

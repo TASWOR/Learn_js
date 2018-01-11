@@ -1,0 +1,38 @@
+﻿<!--
+
+Разработайте модуль, который будет содержать функцию для получения элементов на странице с определенным значением в атрибуте с именем class.
+Пример использование модуля. var arr = MyQuery.FindClass(“redButton”);  –  возвращает массив элементов с атрибутом class=”redButton”.
+
+-->
+<html>
+<head>
+    <title>Taswor</title>
+    <script src="4.js"></script>
+
+
+</head>
+<body>
+<div id="all">
+<p class="class">Hi</p>
+<p class="class2">Hi</p>
+<p class="class">Hi</p>
+<p class="class2">Hi</p>
+
+<div class="class">lorem6</div>
+<div class="class2">lorem6</div>
+<div class="class2">lorem6</div>
+<div class="class">lorem6</div>
+</div>
+<input type="button" value="Перекрасить в красный class" onclick="get.class()">
+<input type="button" value="Перекрасить в синий class2" onclick="get.class2()">
+<input type="button" value="Обвести в красный цвет class" onclick="get.borderClass()">
+    <input type="button" value="Обвести в синий цвет class2" onclick="get.borderClass2()">
+<input type="button" value="Обвести все элементы в желтый цвет" onclick="get.all()">
+<input type="button" value="Все покрасить в желтый цвет" onclick="get.yellow()">
+<input type="button" value="Вернуть все как было" onclick="get.reset()">
+<input type="button" value="Добавить новый параграф" onclick="get.add()">
+<input type="button" value="Удалить последний эллемент" onclick="get.remove()">
+
+
+</body>
+</html>

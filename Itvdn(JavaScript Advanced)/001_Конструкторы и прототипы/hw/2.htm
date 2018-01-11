@@ -1,0 +1,30 @@
+﻿<!--
+Создайте функцию конструктор, которая создает объект со свойством экземпляра,
+ свойством функции-конструктора
+, с методом экземпляра и методом функции-конструктора. Имена выберите произвольно.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function Human(name,age) {
+            this.name=name;
+            this.age=age;
+            this.info=function () {
+                return "Пользователь " + this.name + " имеет " + this.age + " годиков";
+            }
+        }
+        Human.prototype.job="Developer";
+        Human.prototype.work =function () {
+            return "Работает " + this.job;
+        }
+        var human = new Human("Klisa",25);
+        document.write(human.info() + "<hr>")
+        document.write(human.work());
+    </script>
+
+</head>
+<body>
+</body>
+</html>

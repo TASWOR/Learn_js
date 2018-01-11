@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Создание пользовательских конструкторов</title>
+</head>
+<body>
+    <script>
+        function People(name,firstName,age,job) {
+            this.name=name;
+            this.firstName=firstName;
+            this.age=age;
+            this.job=job;
+            this.info=function () {
+                return "Name " + this.name + " FirstName " + this.firstName + " Age " + this.age + " Job " + this.job + "<hr>";
+            }
+        }
+        var Alena = new People("Alena","Skovoroda",25,"HR");
+        var Kolia = new People("Kolia","Oleksenko",22,"Security")
+        document.write(Alena.info());
+        document.write(Kolia.info());
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Сохранение и извлечение данных sessionStorage</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            var output =document.getElementById("output");
+            btn1.onclick=function () {
+                window.sessionStorage.name="Edward";
+                window.sessionStorage.name1="Edwards";
+                window.sessionStorage.name2="Edwsard";
+            };
+            btn2.onclick=function () {
+                for(var i =0;i<sessionStorage.length;i++){
+                    output.innerHTML+=sessionStorage.getItem(sessionStorage.key(i)) + "<br>"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Значения существуют до тех пор, пока открыто окно или вкладка, в котором они сохранены
+    </p>
+    <p>
+        Значения видимы только в окне или вкладке, в которой они были созданы.
+    </p>
+    <input id="btn1" type="button" value="Запись в sessionStorage" />
+    <input id="btn2" type="button" value="Чтение из sessionStorage" />
+    <div id="output">
+    </div>
+</body>
+</html>

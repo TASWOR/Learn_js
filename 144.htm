@@ -1,0 +1,31 @@
+﻿<!--
+Дан массив с числами.
+ Проверьте, есть ли в нем два одинаковых числа подряд.
+  Если есть - выведите 'да', а если нет - выведите 'нет'.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+   var array = [5,6,7,9,1];
+   var flag = false;
+   for(var i=0;i<array.length;i++){
+       for(var j=0;j<array.length;j++){
+           if(array[i]==array[j]){
+               flag = true;
+               break;
+           }
+       }
+   }
+   if(flag){
+       document.write("Есть одинаковые числа в массиве");
+   }
+   else{
+       document.write("Нету одинаковых чисел в массиве");
+   }
+    </script>
+</head>
+<body>
+</body>
+</html>

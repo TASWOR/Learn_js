@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>stopPropogation()</title>
+
+    <script>
+        window.onload=function () {
+            var first =document.getElementById("first");
+            var second =document.getElementById("second");
+            var third =document.getElementById("third");
+            addEvent(first,"red")
+            addEvent(second,"blue")
+            addEvent(third,"green")
+            function addEvent(div,color) {
+                div.addEventListener("click",function (e) {
+                    this.style.backgroundColor=color;
+                    e.stopPropagation();
+                },false)
+            }
+        }
+
+    </script>
+
+    <style>
+        div {
+            border: 3px solid gray;
+            padding: 50px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    Первый
+    <div id="first">
+        Второй
+        <div id="second">
+            Третий
+            <div id="third">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

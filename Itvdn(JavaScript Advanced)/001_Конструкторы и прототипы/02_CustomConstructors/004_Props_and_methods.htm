@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Свойства и методы</title>
+
+    <script type="text/javascript">
+        function Student(name,lastname) {
+            this.name = name;
+            this.lastname = lastname;
+            this.info = function () {
+                return document.write("Имя " + this.name + "</br>" + " Фамилия " +this.lastname + "<hr>")
+            }
+        }
+        Student.facultet = "Факультет Информационных Технологий";
+        var names = new Student("Galia","Pupkina");
+        names.info();
+        document.write(Student.facultet)
+    </script>
+
+</head>
+<body>
+</body>
+</html>

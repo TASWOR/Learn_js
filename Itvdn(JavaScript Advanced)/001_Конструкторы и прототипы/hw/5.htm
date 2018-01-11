@@ -1,0 +1,34 @@
+﻿<!--
+Создайте пример демонстрирующий назначение метода toString().
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function Treug(x,y) {
+            this.x = x;
+            this.y = y;
+        }
+        Treug.prototype.sum = function () {
+            return this.x+this.y;
+        };
+        Treug.prototype.toString=function () {
+            return "Высота " + this.x + "</br> Ширина " + this.y;
+        };
+        Treug.prototype.valueOf = function () {
+            return this.sum();
+        };
+
+        var a = new Treug(5,4);
+        var b = new Treug(4,70);
+        document.write(a +"<hr>");
+        document.write(b.toString()  + "<hr>");
+        document.write(b + "<hr>");
+        document.write(a.toString());
+    </script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Наследование. Шаблон №4</title>
+
+    <script>
+
+        // родительский конструктор
+        function Parent(name,age) {
+            this.name=name||"Edik";
+            this.age= age||150;
+        }
+        Parent.prototype.say=function () {
+            alert("Hi " + this.name +" "+ this.age);
+        };
+        function Child() {
+            Parent.apply(this,arguments)
+        }
+        function inherit(P,C) {
+            C.prototype=P.prototype
+        }
+        inherit(Parent,Child);
+        var person = new Child("Edward",23);
+        person.say();
+        // дополнительное поведение добавленное в прототип.
+        
+
+        // Недостатки шаблона:
+        // Все объекты используют один и тот же прототип, если один из дочерних объектов поменяет прототип это скажется на всех родительских объектамх.
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

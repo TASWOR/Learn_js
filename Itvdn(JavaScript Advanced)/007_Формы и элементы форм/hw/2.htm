@@ -1,0 +1,48 @@
+﻿<!--
+Разработайте страницу заказа пиццы.
+Требования к странице:
+Можно заказать три вида пиццы – маленькая, большая, средняя.
+Можно самостоятельно выбрать ингредиенты к пицце – грибы, бекон, помидоры, сыр, оливки.
+На странице должна вводиться информация о покупателе (его телефон и адрес доставки).
+
+Подумайте, какие данные следует проверять на странице, реализуйте эту проверку.
+Также реализуйте подсчет стоимости пиццы, при выборе размеров и ингредиентов, автоматически должна пересчитываться сумма заказа.
+Цены на размер пиццы и отдельные ингредиенты выберите произвольно.
+
+-->
+<html>
+<head>
+    <title>Taswor</title>
+    <link href="2.css" rel="stylesheet" type="text/css" />
+    <script src="2.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="input">
+    <h1>Size :</h1>
+    <form id="sizes">
+<input type="radio" name="size" value="Small">Small<img src="http://tomatcafe.ru/content/menu/pizza/haming.png">
+<input type="radio" name="size" value="Medium">Medium<img src="http://tomatcafe.ru/content/menu/pizza/haming.png">
+<input type="radio" name="size" value="Big">Big<img src="http://tomatcafe.ru/content/menu/pizza/haming.png"><br>
+
+
+    <hr>
+        <h1>Ingridients :</h1>
+
+        <input type="checkbox" name="meat" value="Meat">Meat<img src="http://icons.iconarchive.com/icons/fixicon/market/128/cutlet-icon.png">
+        <input type="checkbox" name="tomato" value="Tomato">Tomato<img src="http://icons.iconarchive.com/icons/fengsj/vegetables/128/Tomato-icon.png">
+        <input type="checkbox" name="cheese" value="Cheese">Cheese<img src="http://emojis.slackmojis.com/emojis/images/1460689738/362/cheese.png?1460689738">
+        <input type="checkbox" name="mushroom" value="Mushroom">Mushroom<img src="http://www.iconhot.com/icon/png/pickin-time/128/mushroom.png">
+        <input type="checkbox" name="olives" value="Olives">Olives<img src="https://icon-icons.com/icons2/881/PNG/128/Olive_icon-icons.com_68720.png">
+    </form>
+
+    <hr>
+</div>
+
+<p id="price">Ваша цена:</p>
+<p id="reg"></p>
+</body>
+</html>

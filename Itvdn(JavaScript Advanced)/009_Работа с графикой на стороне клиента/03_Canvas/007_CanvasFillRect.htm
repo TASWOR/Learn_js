@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>fillRect()</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            context.fillStyle="blue";
+            context.fillRect(100,100,50,50);
+
+            context.strokeStyle="red";
+            context.lineWidth=6;
+            context.strokeRect(100,100,50,50)
+            context.clearRect(125,125,35,35)
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" height="300" width="300" style="border: solid 1px black;">
+        Ваш браузер не поддерживает элемент <b>Canvas</b>
+    </canvas>
+</body>
+</html>

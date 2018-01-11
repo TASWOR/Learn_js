@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Мемоизация</title>
+    <script>
+        // Мемоизация - прием кэширования результатов функции.
+        function calc(x) {
+            if(!calc.all[x]){
+                if(x>1){
+                    calc.all[x]= calc(x-1) + calc(x-2);
+                }
+                else{
+                    calc.all[x]=x;
+                }
+            }
+            return calc.all[x]
+
+        }
+        calc.all={};
+        for(var i=0;i<100;i++){
+            document.write(i + "=" + calc(i) + "</br>")
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

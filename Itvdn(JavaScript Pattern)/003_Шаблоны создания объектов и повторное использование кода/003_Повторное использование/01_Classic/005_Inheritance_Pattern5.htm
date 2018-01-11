@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Наследование. Шаблон №5</title>
+
+    <script>
+
+        // родительский конструктор
+        function Parent(name) {
+            this.name = name||"Edward"
+        }
+        Parent.prototype.say=function () {
+          alert("Hi I'm " + this.name);
+        };
+        function Child() {}
+        function all(C,P) {
+            var F = function () {};
+            F.prototype=P.prototype;
+            C.prototype=new F();
+        }
+        all(Child,Parent);
+        var child = new Child();
+        child.name="Robot";
+        child.say();
+
+    </script>
+</head>
+<body>
+</body>
+</html>

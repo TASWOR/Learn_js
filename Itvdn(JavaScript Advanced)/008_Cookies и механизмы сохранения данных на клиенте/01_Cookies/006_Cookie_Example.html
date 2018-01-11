@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Использование cookies</title>
+
+    <script>
+
+        window.onload=function () {
+            function getId(id) {
+                return document.getElementById(id);
+            }
+            var f = document.forms[0];
+            getId("saveBtn").onclick=function () {
+                var cookie = f.cookieName.value + "=" + encodeURIComponent(f.cookieValue.value) + ";max-age=" + f.cookieAge.value;
+                document.cookie=cookie;
+            };
+            getId("readAll").onclick=function () {
+              alert(decodeURIComponent(document.cookie));
+            };
+            getId("read2").onclick=function () {
+                alert (getValue(f.read1.value));
+            };
+            function getValue(getCookie) {
+                var allCookie = document.cookie;
+                var pos = allCookie.indexOf(getCookie + "=");
+                if (pos !== -1) {
+                    var start = pos + getCookie.length + 1;
+                    var end = allCookie.indexOf(";", start);
+                    if (end === -1) {
+                        end = allCookie.length;
+                    }
+                }
+                var value = allCookie.substring(start, end);
+                return decodeURIComponent(value);
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<form>
+    Имя
+    <input type="text" name="cookieName" value="" /><br />
+    Значение
+    <input type="text" name="cookieValue" value="" /><br />
+    Время жизни
+    <input type="text" name="cookieAge" value="" /><br />
+    <input id="saveBtn" type="button" value="Сохранить" />
+
+    <br />
+    <br />
+    <br />
+
+    <input id="readAll" type="button" value="Прочитать все cookies" />
+    <br />
+    Какую вы куку хотите прочитать?
+    <input name="read1" type="text" />
+    <br />
+    <input id="read2" type="button" value="Прочитать" />
+
+</form>
+</body>
+</html>

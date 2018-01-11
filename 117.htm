@@ -1,0 +1,22 @@
+﻿<!--
+Переменная lang может принимать два значения: 'ru' и 'en'.
+Переменная month может принимать значения от 0 до 11
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+      var lang = prompt("Введите язык (ru,en)");
+      var month = prompt("Введите месяц");
+      var obj = {ru:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+      en:["January ","February ","March ","April ","May ","June ","July ","August ","September ","October ","November ","December "]};
+      var string = "fdsfgd gfdg fdg dfgdf fdgdfg dfgdfg er re tgd gdfg gtr dasd";
+      var a = string.split(" ");
+      obj.rn=a;
+      document.write(obj[lang][month-1]);
+    </script>
+</head>
+<body>
+</body>
+</html>

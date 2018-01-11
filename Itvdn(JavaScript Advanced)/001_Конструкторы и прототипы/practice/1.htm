@@ -1,0 +1,49 @@
+﻿<!--
+Суть проста, есть объекты:
+User - функция-конструктор;
+Guest - обычный пользователь, гость;
+Admin - ну вы поняли, что это за чел.
+У всех объектов есть свойства:
+имя.
+пароль.
+тип пользователя.
+Нужно сделать так чтобы гость нашего сайта мог посмотреть только свой пароль, а пароли других пользователей (гостя или админа) были бы недоступны.
+В свою очередь админы могут смотреть пароли всех пользователей.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+    function People(name,password,type) {
+        this.name=name;
+        this.password=password;
+        this.type=type;
+    }
+    People.prototype.showpass=function (username) {
+        if(this.type==="admin"){
+            document.write(username.name + " has password " + username.password+ "<hr>")
+        }
+        else{
+            if(username.name===this.name){
+                document.write(username.name + " has password " + username.password + "<hr>")
+            }
+            else {
+                document.write("Вы не админ и не можете посмотреть пароль пользователя или этот пользователь"+ "<hr>")
+            }
+        }
+    };
+    var kisa = new People("kisa",212014066,"admin");
+    var kewa = new People("kewa",123456789,"user");
+    var lol = new People("lol",145498,"user");
+    kewa.showpass(kewa);
+    kisa.showpass(kewa);
+    kewa.showpass(kisa);
+    lol.showpass(kewa);
+    kisa.showpass(lol);
+    </script>
+
+</head>
+<body>
+</body>
+</html>

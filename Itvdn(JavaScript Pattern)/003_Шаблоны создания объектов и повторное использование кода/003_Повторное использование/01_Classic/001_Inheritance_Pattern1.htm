@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Наследование. Шаблон №1</title>
+
+    <script>
+
+        // родительский конструктор
+        var Parent=function (name) {
+            this.name = name||"Adam";
+        }
+
+        // дополнительное поведение добавленное в прототип.
+        Parent.prototype.say=function () {
+            alert("Hi " + this.name);
+        }
+
+        // пустой дочерний конструктор.
+        var Child = function () {}
+            // Самый простой способ реализовать наследование - создать объект с помощью родительского конструктора и приствоить
+            // его как прототип для дочернего конструктора.
+          var inherit=function(P,C){
+            C.prototype= new P();
+          };
+          inherit(Parent,Child);
+          var hi = new Child();
+          hi.name="Edward";
+          hi.say();
+        
+
+
+
+        // Недостатки шаблона:
+        // Невозможно передать параметры от дочернего конструктора к родительскому
+        var hi2 =new Child("Kaka");
+        hi2.say();  
+
+    </script>
+</head>
+<body>
+</body>
+</html>

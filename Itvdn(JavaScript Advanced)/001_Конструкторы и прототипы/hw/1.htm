@@ -1,0 +1,39 @@
+﻿<!--
+Создайте функцию-конструктор Box (коробка) для создания объекта со свойствами
+ Height (высота), Width (ширина), Depth (глубина) и Material (материал).
+  Также, в объекте должны быть методы Volume – для получения объема и equals()
+   – для сравнения объектов,
+ объекты должны считаться равными, если содержат одинаковые значения в свойстве Material.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function Box(height,width,depth,material) {
+            this.height=height;
+            this.width=width;
+            this.depth=depth;
+            this.material=material;
+            this.volume=function () {
+                return this.height*this.width*this.depth;
+            };
+            this.equals=function (otherMaterial) {
+                return this.material===otherMaterial.material;
+            }
+        }
+        var a= new Box(5,7,8,"metal");
+        var b = new Box(4,7,9,"plastik");
+        var c = new Box(1,8,5,"metal");
+        document.write(a.volume() + "<hr>");
+        document.write(b.volume() + "<hr>");
+        document.write(c.volume() + "<hr>");
+        document.write(a.equals(b) + "<hr>");
+        document.write(a.equals(c));
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

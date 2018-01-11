@@ -1,0 +1,49 @@
+﻿<!--
+Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var str="var_text_hello";
+        var res="";
+        str = str.split("_");
+        for(var i=0;i<str.length;i++){
+            res += str[i].substring(0,1).toUpperCase() + str[i].substring(1);
+        }
+        res = res.substring(0,1).toLowerCase() + res.substring(1);
+        document.write(res + "<hr>");
+/*---------------------------------------------------------------------------------------------------*/
+        var text = "var_ateddxt_hello";
+        var arr=[];
+        text = text.split("_");
+        for(var j =0;j<text.length;j++){
+            arr.push(texts(text[j]));
+        }
+        function texts(stri){
+            stri = stri.substring(0,1).toUpperCase() + stri.substring(1);
+
+            return stri;
+        }
+        var arra = arr.join("");
+        arra = arra.substring(0,1).toLowerCase() + arra.substring(1);
+        document.write(arra+ "<hr>");
+        /*---------------------------------------------------------------------------------------------------*/
+        var arrays=[];
+        function all(x){
+            x = x.split("_");
+            for(var i=0;i<x.length;i++){
+                arrays.push(x[i].substring(0,1).toUpperCase() + x[i].substring(1))
+            }
+            var getStrin = arrays.join("");
+            arrays = getStrin.substring(0,1).toLowerCase() + getStrin.substring(1);
+            return arrays;
+        }
+        document.write(all("fds_fdsf_rew3"))
+
+    </script>
+</head>
+<body>
+</body>
+</html>

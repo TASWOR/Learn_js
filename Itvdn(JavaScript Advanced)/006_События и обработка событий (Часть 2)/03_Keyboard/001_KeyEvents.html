@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>События клавиатуры</title>
+    <script>
+        window.onload=function () {
+            var a =document.getElementById("output");
+            var main =document.getElementById("main");
+            main.onkeyup=function () {
+                a.innerHTML+="Onkeyup press" + "</br>";
+            };
+            main.onkeydown=function () {
+                    a.innerHTML+="Onkeydown press" + "</br>";
+                };
+            main.onkeypress=function () {
+                    a.innerHTML+="Onkeypress press" + "</br>";
+                }
+        }
+    </script>
+</head>
+<body id="main">
+    <p>Начните нажимать клавиши на клавиатуре. Обратите внимание какие события генерируются при нажатии на клавиши Shift, F1-F12, стрелочки и какие при нажатии на клавиши с печатными символами</p>
+    <p id="output"></p>
+</body>
+</html>

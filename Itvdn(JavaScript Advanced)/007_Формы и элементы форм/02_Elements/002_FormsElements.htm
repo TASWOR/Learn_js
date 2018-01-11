@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Свойства элементов в форме</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            var message="";
+            document.getElementById("btn").onclick=function () {
+              for(var i=0;i<form1.elements.length;i++){
+                  message+="Value: " + form1.elements[i].value  + "\r\n";
+                  message+="Name: " + form1.elements[i].name + "\r\n";
+                  message+="Type: " + form1.elements[i].type + "\r\n";
+                  message+="В какой форме находится: " + form1.elements[i].form.name + "r\n";
+                  message+="------------------------" + "\r\n"
+              }
+                alert(message)
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="form1">
+        First Name
+        <input type="text" name="firsNameEdit" />
+        <br />
+        Last Name
+        <input type="text" name="lastNameEdit" />
+        <br />
+        <input id="btn" type="button" value="Get All Elements" />
+    </form>
+</body>
+</html>

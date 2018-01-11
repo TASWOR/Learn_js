@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод valueOf</title>
+
+    <script type="text/javascript">
+        function Treug(x,y) {
+            this.x=x;
+            this.y=y;
+        }
+        Treug.prototype.sum= function () {
+            return this.x+this.y;
+        };
+        Treug.prototype.toString = function () {
+            return "Высота = " + this.x + "</br>Ширина = " + this.y;
+        };
+        Treug.prototype.valueOf = function () {
+            return this.sum();
+        };
+        var a = new Treug(5,7);
+        var b = new Treug(7,8)
+        document.write(a + "<hr>");
+        document.write(a.toString() + "<hr>");
+        document.write(b.valueOf() + "<hr>");
+        document.write(a+b);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

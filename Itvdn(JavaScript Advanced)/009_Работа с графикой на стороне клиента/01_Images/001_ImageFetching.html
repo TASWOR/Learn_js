@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Работа с изображениями</title>
+    <script>
+
+        window.onload=function () {
+            var img1 = document.getElementById("logoImg");
+            var img2 = document.images.logo;
+            var img3 = document.images["logo"];
+            var img4 = document.logo;
+            alert(img1 + " " + img2 + " " + img3 + " " + img4)
+        }
+
+    </script>
+</head>
+
+<body>
+    <img id="logoImg" name="logo" src="images/logo.png" alt="CyberBionic Systematics" />
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Значение возвращаемое немедленно вызываемой функцией</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: (function () {
+                var fname = "Edward";
+                var lname = "Raikov";
+                return fname + " " + lname;
+            })(),
+            hi: function () {
+                alert("Hi " + this.name)
+            }
+        };
+        obj.hi();
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Наследование через прототип ECMAScript 5</title>
+</head>
+<body>
+    <script>
+        var base ={login:"T@SWOR"};
+        var log = Object.create(base);
+        alert(log.login);
+        var log2 = Object.create(base,
+            {
+                age:{value:25}
+            }
+            );
+        alert(log2.age);
+    </script>
+</body>
+</html>
+

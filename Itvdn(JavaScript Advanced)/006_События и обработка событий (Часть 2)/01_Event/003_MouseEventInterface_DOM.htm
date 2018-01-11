@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MouseEvent Интерфейс</title>
+    
+    <style type="text/css">
+        div {
+            text-align: center;
+            background-color: #ceffff;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.addEventListener("load",init,false);
+        function init() {
+            var div =document.getElementsByTagName("div")[0];
+            div.addEventListener("mousemove",move,false);
+        }
+        function move(e) {
+            var message = "Alt: " + e.altKey + "</br>";
+            message+= "Shift: " + e.shiftKey + "</br>";
+            message+= "Ctrl: " +  e.ctrlKey + "</br>";
+            message+= "Position x: " + e.clientX + "</br>";
+            message += "Position y: " + e.clientY + "</br>";
+            message += "Screen x: " + e.screenX + "</br>";
+            message += "Screen y: " + e.screenY + "</br>";
+            document.getElementById("output").innerHTML=message;
+        }
+    </script>
+</head>
+<body>
+    <div></div>
+    <p id="output"></p>
+</body>
+</html>

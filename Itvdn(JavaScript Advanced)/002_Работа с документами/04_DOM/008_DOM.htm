@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Работа с узлами DOM</title>
+    <script type="text/javascript">
+        function selectFirstChild() {
+            reset();
+            var id = document.getElementById("list");
+            id.firstChild.style.color="red";
+        }
+        function selectLastChild() {
+            reset();
+            var id = document.getElementById("list");
+            id.lastChild.style.color="blue";
+        }
+        function reset() {
+            var all = document.getElementsByTagName("li");
+            for(var i=0;i<all.length;i++){
+                all[i].style.color="black";
+            }
+        }
+        var choice=null;
+        function selectNextNode() {
+            reset();
+            var id = document.getElementById("list");
+            if(choice===null){
+                choice=id.firstChild;
+                choice.style.color="yellow";
+                return;
+            }
+            choice=choice.nextSibling;
+            choice.style.color="yellow";
+        }
+        function selectPrevNode() {
+            reset();
+            var id =document.getElementById("list");
+            if(choice===null){
+                choice=id.lastElementChild;
+                choice.style.color="yellow";
+                return;
+            }
+            choice=choice.previousSibling;
+            choice.style.color="yellow";
+        }
+        function createNewChild() {
+            var id = document.getElementById("list");
+            var create = document.createElement("li");
+            create.innerHTML="New element";
+            id.appendChild(create);
+        }
+        function createNewChildAtStart() {
+            var id = document.getElementById("list");
+            var item = document.createElement("li");
+            item.innerHTML="New element";
+            id.insertBefore(item,id.firstElementChild);
+        }
+        function removeLastChild() {
+            var id = document.getElementById("list");
+            var item = id.lastChild;
+            id.removeChild(item);
+        }
+        function removeFirstChild() {
+            var id = document.getElementById("list");
+            var item = id.firstChild;
+            id.removeChild(item);
+        }
+    </script>
+</head>
+<body>
+    <ul id="list"><li>List Item 1</li><li>List Item 2</li><li>List Item 3</li><li>List Item 4</li><li>List Item 5</li></ul>
+    <br />
+    <input type="button" onclick="selectFirstChild()" style="width: 210px;" value="Выбрать первый элемент" /><br />
+    <input type="button" onclick="selectLastChild()" style="width: 210px;" value="Выбрать последний элемент" /><br />
+    <input type="button" onclick="selectNextNode()" style="width: 210px;" value="Выбрать следующий элемент" /><br />
+    <input type="button" onclick="selectPrevNode()" style="width: 210px;" value="Выбрать предыдущий элемент" /><br />
+    <input type="button" onclick="createNewChildAtStart()" style="width: 210px;" value="Добавить  в начало" /><br />
+    <input type="button" onclick="createNewChild()" style="width: 210px;" value="Добавить элемент в конец" /><br />
+    <input type="button" onclick="removeLastChild()" style="width: 210px;" value="Удалить элемент в конце" /><br />
+    <input type="button" onclick="removeFirstChild()" style="width: 210px;" value="Удалить элемент в начале" /><br />
+</body>
+</html>
+

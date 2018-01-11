@@ -1,0 +1,25 @@
+﻿<!--
+Преобразуйте строку 'var_test_text' в 'varTestText'. Скрипт, конечно же, должен работать с любыми аналогичными строками.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+      var text = "var_test_text";
+      var b = text.replace(/_t/g,"T");
+      document.write(b + "<hr>");
+      var b = text.split("_");
+      for(var i=0;i<b.length;i++){
+          document.write(b[i].slice(0,1).toUpperCase() + b[i].slice(1));
+      }
+      document.write("<hr>");
+      document.write(b[0]);
+      for(var i=1;i<b.length;i++){
+          document.write(b[i].slice(0,1).toUpperCase() + b[i].slice(1));
+      }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Простая анимация цвета</title>
+</head>
+<body>
+
+    <div id="rect">
+    </div>
+
+    <script type="text/javascript">
+        var rect=document.getElementById("rect");
+        rect.style.height="100px";
+        rect.style.width="100px";
+        rect.style.border="1px solid black";
+        var colors=["red","yellow","blue","white"];
+        var nextColor=0;
+        setInterval(function () {
+            rect.style.backgroundColor=colors[nextColor++ % colors.length]
+        },500)
+    </script>
+</body>
+</html>

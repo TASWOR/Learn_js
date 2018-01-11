@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Прототип</title>
+
+    <script type="text/javascript">
+
+        function Priam(x,y){
+            this.x =x;
+            this.y=y;
+        }
+        Priam.prototype.sum= function () {
+            return this.x + this.y;
+        }
+        var o  = new Priam(5,4);
+        var z = o.sum();
+        document.write(z);
+    </script>
+
+</head>
+<body>
+</body>
+</html>

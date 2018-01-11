@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>События клавиатуры</title>
+    <script>
+        window.onload=function () {
+            var main = document.getElementById("main");
+            var output = document.getElementById("output");
+            main.onkeypress=function (e) {
+                clear();
+                print("Нажат символ: " + String.fromCharCode(e.charCode));
+                e.ctrlKey===true?print("Нажат ctrl"):false;
+                e.shiftKey===true?print("Нажат shift"):false;
+                e.altKey===true?print("Нажат alt"):false;
+            }
+            function clear() {
+                output.innerHTML="";
+            }
+            function print(message) {
+                output.innerHTML+=message + "</br>";
+            }
+        }
+    </script>
+</head>
+<body id="main">
+    <p id="output"></p>
+</body>
+</html>

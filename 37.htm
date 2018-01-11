@@ -1,0 +1,20 @@
+﻿<!--
+	Дан объект {js:['jQuery', 'Angular'], php: 'hello', css: 'world'}. Выведите с его помощью слово 'jQuery'
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var arr={js:['jQuery', 'Angular'], php: 'hello', css: 'world'}
+        document.write(arr.js[0] + "<hr>");
+        for( var i  = 0;i<arr.js.length;i++){
+            if(arr.js[i]=='jQuery'){
+                document.write(arr.js[i])
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

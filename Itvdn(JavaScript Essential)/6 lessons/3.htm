@@ -1,0 +1,34 @@
+﻿<!--
+
+Добавьте проверку двух передаваемых чисел в виде аргументов функции следующим образом:
+ числа могут передаваться в виде массивов и возвращать результат (так же, массивом).
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+    function oper(x,y){
+        if(typeof x=="object"){
+            document.write("x Это обьект <hr>")
+        }
+        else{
+            document.write("x Это не обьект<hr>")
+        }
+        if(typeof x=="object"){
+            document.write("y Это обьект<hr>")
+        }
+        else{
+            document.write("y Это не обьект<hr>")
+        }
+        return document.write(x + "</br>" + y);
+    }
+    var arr= [4,7,8,3];
+    var arra= [1,2,5,3];
+    oper(arr,arra)
+    </script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>События мыши</title>
+
+    <script>
+
+       /* window.onload=function () {
+            var p = document.getElementsByTagName("p")[0];
+            p.onmouseover=function () {
+                this.style.background="green";
+            }
+            p.onmouseout=function () {
+                this.style.background="blue";
+            }
+        }*/
+       window.addEventListener("load",block,false);
+       function block() {
+           var p = document.getElementsByTagName("p")[0];
+            p.addEventListener("mouseover",over,false);
+            p.addEventListener("mouseout",out,false);
+       }
+       function over(e) {
+           e.target.style.backgroundColor="blue";
+       }
+       function out(e) {
+           e.target.style.backgroundColor="yellow";
+       }
+
+    </script>
+
+    <style>
+        p {
+            background-color:red;
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

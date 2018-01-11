@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>setTimeout and clearTimeout</title>
+    <script>
+        var timer;
+
+        window.onload= function () {
+            timer=setTimeout(message,2000);
+        };
+        function message() {
+            alert("Hi")
+        }
+        function cancel() {
+            clearTimeout(timer);
+        }
+    </script>
+</head>
+<body>
+<p>Приветствие будет через 2 секунды</p>
+<input type="button" value="Отменить приветствие" onclick="cancel()">
+</body>
+</html>

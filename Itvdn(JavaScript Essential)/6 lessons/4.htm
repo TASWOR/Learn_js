@@ -1,0 +1,34 @@
+﻿<!--
+
+Добавить третью проверку: функция принимает два объекта со свойствами 'a' и 'b',
+ так же возвращает результат в виде объекта с одним свойством типа string
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+    function oper(x,y){
+        if(typeof x=="object"){
+            document.write("x Это обьект <hr>")
+        }
+        else{
+            document.write("x Это не обьект<hr>")
+        }
+        if(typeof x=="object"){
+            document.write("y Это обьект<hr>")
+        }
+        else{
+            document.write("y Это не обьект<hr>")
+        }
+        return document.write(x + "</br>" + y);
+    }
+    var arr= [4,7,"dffd",3];
+    var arra= [1,"e23",5,3];
+    oper(arr,arra)
+    </script>
+
+</head>
+<body>
+</body>
+</html>

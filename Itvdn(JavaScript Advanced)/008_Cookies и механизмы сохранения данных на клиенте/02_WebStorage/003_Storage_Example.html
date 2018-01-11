@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Использование localStorage</title>
+
+    <script>
+       window.onload=function () {
+           if(localStorage.color){
+               document.body.style.backgroundColor=localStorage.color;
+           }
+           document.getElementById("saveButton").onclick=function () {
+               var selectColor = color("color");
+               localStorage.color=selectColor;
+               document.body.style.backgroundColor=selectColor;
+           };
+           function color(color) {
+               var element = document.getElementsByName(color);
+               for(var i = 0;i<element.length;i++){
+                   if(element[i].checked){
+                       return element[i].value
+                   }
+               }
+           }
+       }
+    </script>
+
+</head>
+<body>
+    <form>
+        <input type="radio" name="color" value="#ffd800" /> Orange
+        <input type="radio" name="color" value="#5ade54" /> Green
+        <input type="radio" name="color" value="red" /> Red
+        <input id="saveButton" type="button" value="Сохранить" />
+    </form>
+</body>
+</html>

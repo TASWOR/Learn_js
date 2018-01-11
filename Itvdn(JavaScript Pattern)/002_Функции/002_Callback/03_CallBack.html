@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Пример функции обратного вызова</title>
+</head>
+<body>
+    <p>
+        Paragraph 1
+    </p>
+    <p>
+        Paragraph 2
+    </p>
+    <p>
+        Paragraph 3
+    </p>
+    <p>
+        Paragraph 4
+    </p>
+    <p>
+        Paragraph 5
+    </p>
+    <p>
+        Paragraph 6
+    </p>
+    <p>
+        Paragraph 7
+    </p>
+    <p>
+        Paragraph 8
+    </p>
+    <p>
+        Paragraph 9
+    </p>
+    <p>
+        Paragraph 10
+    </p>
+
+    <script>
+        function findNodes() {
+            var nodes =[];
+            var pArray= document.getElementsByTagName("p");
+
+            for(var i=0;i<pArray.length;i++){
+                nodes.push(pArray[i])
+            }
+            return nodes
+        }
+        function makeBorder(nodes) {
+            for(var i=0;i<nodes.length;i++){
+                nodes[i].style.border="2px solid black"
+            }
+        }
+        makeBorder(findNodes());
+
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+﻿<!--
+Переменная lang может принимать 2 значения: 'ru' 'en'.
+ Если она имеет значение 'ru', то в переменную arr запишем массив дней недели на русском языке,
+  а если имеет значение 'en' – то на английском.
+ Решите задачу через 2 if, через switch-case и через многомерный массив без ифов и switch.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+       var lang = prompt("Введите ru или en");
+       var array =[];
+       switch (lang) {
+           case "ru": {
+               array = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+               document.write(array + "<hr>");
+               break;
+           }
+           case "en": {
+               array = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+               document.write(array + "<hr>");
+               break;
+           }
+           default: {
+               document.write("Вы ввели неправильное значение! <hr>")
+           }
+       }
+           if(lang==="ru"){
+               array=["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"];
+               document.write(array+"<hr>");
+           }
+           else if(lang==="en"){
+               array = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+               document.write(array +"<hr>");
+           }
+           else{
+               document.write("Вы ввели неправильное значение! <hr>")
+           }
+           var arr={ru:["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+               en:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]};
+           document.write(arr.ru+ "<hr>");
+       document.write(arr.en+ "<hr>");
+    </script>
+</head>
+<body>
+</body>
+</html>

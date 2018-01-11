@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод equals</title>
+
+    <script type="text/javascript">
+        function Treug(x,y) {
+            this.x=x;
+            this.y=y;
+        }
+        Treug.prototype.equals= function (otherObject) {
+            if(this.x===otherObject.x&&this.y===otherObject.y){
+                return true;
+            }
+            return false;
+        }
+        var z = new Treug(5,4);
+        var x = new Treug(5,4);
+        var y = new Treug(7,8);
+        document.write(z.equals(x) + "<hr>");
+        document.write(z.equals(y));
+    </script>
+</head>
+<body>
+</body>
+</html>

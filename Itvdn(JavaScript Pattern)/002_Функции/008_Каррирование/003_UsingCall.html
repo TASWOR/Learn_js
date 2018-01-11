@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Использование call</title>
+    <script>
+        // объект arrayLikeObject похож на массив так как у него именами свойств являются индексы и присутствует свойство length.
+       var arra={"1":"Понедельник",
+           "2":"Вторник",
+           "3":"Среда",
+           "4":"Четверг",
+           "5":"Пятница",
+           "6":"Суббота",
+           "7":"Восуресение",
+       length:6};
+           var result = Array.prototype.slice.call(arra,2,4);
+       alert(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+

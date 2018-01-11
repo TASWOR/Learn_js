@@ -1,0 +1,32 @@
+﻿<!--
+Разработайте функцию-конструктор, которая будет создавать объект Human (человек).
+ Создайте массив объектов и реализуйте функцию, которая будет сортировать элементы массива по
+  значению свойства Age по возрастанию или по убыванию.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function Human(name,age){
+            this.name=name;
+            this.age=age;
+        }
+
+        var Alewa = new Human("Alewa",2);
+        var Sonia = new Human("Sonia",15);
+        var Alena = new Human("Alena",21);
+        var Serega = new Human("Serega",25);
+        var array = [Alewa,Sonia,Alena,Serega];
+        var a=0;
+        array.forEach(function (array) {
+            if(a<array.age){
+                document.write(array.age + "<hr>")
+            }
+        });
+    </script>
+
+</head>
+<body>
+</body>
+</html>

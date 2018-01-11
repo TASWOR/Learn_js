@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Работа с узлами DOM - Свойства</title>
+
+    <script type="text/javascript">
+        window.onload=function () {
+            var lisi = document.getElementById("list");
+            for(var i =0;i<lisi.childNodes.length;i++){
+                if(lisi.childNodes[i].nodeType!==1){
+                    continue;
+                }
+                lisi.childNodes[i].style.color="blue";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- После каждого элемента находиться текстовый узел - перенос на новую строку. -->
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+</html>

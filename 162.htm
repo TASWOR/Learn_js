@@ -1,0 +1,25 @@
+﻿<!--
+Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти.
+Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var arr=[5,7,95,1,13,70,8];
+        var arra=[];
+        function a(x){
+            return (x>0)&&(x<10)
+        }
+        for (var i =0;i<arr.length;i++){
+            if(a(arr[i])){
+                arra.push(arr[i])
+            }
+        }
+        document.write(arra);
+    </script>
+</head>
+<body>
+</body>
+</html>

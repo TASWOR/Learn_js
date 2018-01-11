@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод toString</title>
+
+    <script type="text/javascript">
+       function Treug(x,y) {
+           this.x=x;
+           this.y=y;
+       }
+       Treug.prototype.toString= function () {
+           return "Высота: " + this.x + "</br>Ширина " + this.y;
+       };
+       Treug.prototype.sum = function () {
+           return this.x + this.y;
+       }
+        var x = new Treug(5,4);
+       var y =new Treug(7,8);
+       document.write(x + "<hr>");
+       document.write(y.toString() + "<hr>");
+       document.write("Сумма = " + x.sum())
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

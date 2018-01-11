@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Соглашения об именах CSS атрибутов в JavaScript</title>
+    <script type="text/javascript">
+
+        // Если имя CSS аттрибута содержит дефисы, имя свойства объекта образуеться путем удаления
+        // дефисов и перевода в верхний регистр буквы, непосредственно следующей за каждым из них.
+
+        window.onload = function () {
+            var btn=document.getElementsByTagName("input")[0];
+            btn.onclick=function () {
+                var div = document.getElementsByTagName("div")[0];
+                div.style.background="blue";
+            };
+            document.getElementById("btn").onclick=function () {
+                var a = document.getElementById("div");
+                a.style.backgroundColor="green";
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <div style="width: 200px; height: 200px; background-color: Red;">
+    </div>
+    <input  type="button" value="Сменить цвет" />
+    <div id="div" style="width: 200px; height: 200px; background-color: Red;">
+    </div>
+    <input id="btn" type="button" value="Сменить цвет" />
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+    <title>Класс "Оценка"</title>
+
+    <script type="text/javascript">
+
+       function Score(x){
+           this.x=x;
+           if(x===5){
+               this.talk=function () {
+                   document.write("Отличник")
+               }
+           }
+           else if(x===4){
+               this.talk = function () {
+                   document.write("Не плохо")
+               }
+           }
+           else if(x===3){
+               this.talk= function () {
+                   document.write("Можно было и лучше")
+               }
+           }
+           else if(x<=2&&x>0){
+               this.talk = function () {
+                   document.write("ДВОЕЧНИК!")
+               }
+           }
+           else{
+               this.talk = function () {
+                   document.write("Такой оценки нету")
+               }
+           }
+       }
+       var number1 = prompt("Введите оценку");
+       var number = parseInt(number1);
+       var score = new Score(number);
+       score.talk();
+    </script>
+
+</head>
+<body>
+</body>
+</html>

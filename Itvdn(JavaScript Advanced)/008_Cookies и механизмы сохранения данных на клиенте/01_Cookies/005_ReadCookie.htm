@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie = "version=" + encodeURIComponent(document.lastModified);
+        }
+        function getCookie() {
+            alert(cookieValue("version"))
+        }
+        function cookieValue(name) {
+            var allCookie = document.cookie;
+            var pos = allCookie.indexOf(name + "=");
+            if(pos!==-1){
+                var start = pos + name.length+1;
+                var end = allCookie.indexOf(";",start);
+                if(end===-1){
+                    end = allCookie.length;
+                }
+            }
+            var value = allCookie.substring(start,end);
+            return decodeURIComponent(value);
+        }
+
+    </script>
+
+</head>
+<body>
+<input type="button" value="Set cookie" onclick="setCookie()" />
+<input type="button" value="Get cookie" onclick="getCookie()" />
+</body>
+</html>

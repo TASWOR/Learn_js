@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Шаблоны принудительного использования ключевого слова new</title>
+</head>
+<body>
+    <script>
+        function Peopla(name) {
+            if(!(this instanceof Peopla))
+            {
+                return new Peopla(name);
+            }
+            this.name=name;
+
+        }
+        Peopla.prototype.getName=function () {
+            return document.write(this.name + "<hr>");
+        }
+        var Artas = new Peopla("Artas")
+        var Kela = Peopla("Kela")
+        Artas.getName();
+        Kela.getName();
+    </script>
+</body>
+</html>

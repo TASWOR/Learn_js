@@ -1,0 +1,32 @@
+﻿<!--
+Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var arr=[2,4,8,3,19];
+        var res=0;
+        for(var i=0;i<arr.length;i++){
+            res+=arr[i];
+            if(res>=10){
+                document.write("Чтоб сумма была больше 10, надо сложить " + ++i + " элементов!" +"<hr>");
+                break;
+            }
+        }
+        var res=0;
+        function sum(arr){
+            for(var i=0;i<arr.length;i++){
+                res+=arr[i];
+                if (res>=10){
+                    return i+1;
+                }
+            }
+        }
+        document.write("Чтоб сумма была больше 10, надо сложить " + sum(arr) + " элементов!");
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>События клавиатуры</title>
+    <script>
+        window.onload=function () {
+            var div = document.getElementById("main");
+            var output = document.getElementById("output");
+            //div.onkeypress=function (e) {
+            //div.onkeydown=function (e) {
+            div.onkeyup=function (e) {
+                clear();
+                press("KeyCode: " + e.keyCode);
+                press("ChacCode: " + e.charCode);
+                press("Press Shift " + e.shiftKey);
+                press("Press Ctrl " + e.ctrlKey);
+                press("Press Alt " + e.altKey);
+                press("<hr>")
+            };
+            function clear() {
+                output.innerHTML=""
+            }
+            function press(message) {
+                output.innerHTML+=message + "</br>";
+            }
+        }
+    </script>
+</head>
+<body id="main">
+    <p id="output"></p>
+</body>
+</html>

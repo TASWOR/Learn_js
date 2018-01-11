@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Сохранение cookie</title>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie="Name=Edward";
+            document.cookie="Password=212014066"
+        }
+        function getCookie() {
+            alert(document.cookie)
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Set cookie" onclick="setCookie()" />
+    <input type="button" value="Get cookie" onclick="getCookie()" />
+</body>
+</html>

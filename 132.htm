@@ -1,0 +1,27 @@
+﻿<!--
+Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+      var str = "fs sdfger fsdc dsf";
+      var a = str.slice(0,1).toUpperCase() + str.slice(1);
+      var b = str.split(" ");
+
+      document.write(a + "<hr>");
+      var stra = 'hello';
+      stra = stra.split("");
+      var res = stra.join("");
+      document.write(stra[0].toUpperCase() + res.substring(1) + "<hr>");
+      var stri = "hello";
+      stri = stri.split("");
+      stri[0] = stri[0].toUpperCase();
+      stri = stri.join("");
+      document.write(stri);
+    </script>
+</head>
+<body>
+</body>
+</html>

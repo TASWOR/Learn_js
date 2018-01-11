@@ -1,0 +1,18 @@
+﻿<!--
+Дана строка 'Я-учу-javascript!'. Замените все дефисы на '!' с помощью глобального поиска и замены.
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        var str = 'Я-учу-javascript!';
+        var b =str.split("-");
+        var a = b.join("!");
+        var c = str.replace(/-/g , "!");
+        document.write(a + "<hr>" + c);
+    </script>
+</head>
+<body>
+</body>
+</html>

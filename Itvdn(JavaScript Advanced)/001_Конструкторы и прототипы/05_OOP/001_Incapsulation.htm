@@ -1,0 +1,29 @@
+﻿<!--
+Инкапсуляция - сокрытие релаизаци и данных объекта.
+-->
+
+<html>
+<head>
+    <title>Массивы в JavaScript</title>
+
+    <script type="text/javascript">
+
+        var Cl = function () {
+            var hi=function () {
+                document.write("Hi <hr>")
+            }
+            this.bye = function () {
+                document.write("Bye")
+            }
+            hi();
+        }
+        var o = new Cl();
+        o.bye();
+        o.hi();//Не видет ее
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

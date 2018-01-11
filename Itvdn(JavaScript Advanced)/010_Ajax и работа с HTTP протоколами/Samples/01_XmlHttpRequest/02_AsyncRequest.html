@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>XMLHttpRequest асинхронный запрос</title>
+    <script>
+        window.onload=function () {
+            document.getElementById("btnGet").onclick=function () {
+                var xml = new XMLHttpRequest();
+                xml.open("GET","testfile.html",true);
+                xml.onreadystatechange=function () {
+                    if(xml.readyState===4){
+                        if(xml.status===200){
+                            document.getElementById("output").innerHTML+=xml.responseText;
+                        }
+                    }
+                };
+                xml.send();
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btnGet" type="button" value="Get Info" />
+<p id="output"></p>
+</body>
+</html>

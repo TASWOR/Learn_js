@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод test()</title>
+    <script type="text/javascript">
+        // Метод test возвращает true если метод exec возвращает не null;
+        var pattern=/\d\d\d/;
+        var text = "fsdfsdf";
+        if(pattern.test(text)){
+            document.write(text + " проходит тест" + "<hr>")
+        }
+        else {
+            document.write(text + " не проходит тест"+ "<hr>")
+        }
+        var text = "15625";
+        if(pattern.test(text)){
+            document.write(text + " проходит тест" + "<hr>")
+        }
+        else {
+            document.write(text + " не проходит тест"+ "<hr>")
+        }
+        var text = 15625;
+        if(pattern.test(text)){
+            document.write(text + " проходит тест" + "<hr>")
+        }
+        else {
+            document.write(text + " не проходит тест"+ "<hr>")
+        }
+        var text = 15;
+        if(pattern.test(text)){
+            document.write(text + " проходит тест" + "<hr>")
+        }
+        else {
+            document.write(text + " не проходит тест"+ "<hr>")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

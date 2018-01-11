@@ -1,0 +1,49 @@
+﻿<!--
+
+Напишите математическую функцию, которая принимает (в виде аргументов) два числа и знак арифметической операции (+, -, /, *).
+ Функция производит арифметическое вычесление и возвращает результат в переменную. Вывести результат с помощью модального окна alert().
+-->
+<html>
+<head>
+    <title>Taswor</title>
+
+    <script type="text/javascript">
+        function oper(x,y,z) {
+            if (isNaN(x) || isNaN(y)) {
+                return document.write("Такого числа не существует")
+            }
+            else {
+                switch (z) {
+                    case "+": {
+                        return document.write(a + b);
+                    }
+                    case "-": {
+                        return document.write(a - b);
+                    }
+                    case "*": {
+                        return document.write(a * b);
+                    }
+                    case "/": {
+                        if (b != 0) {
+                            return document.write(a / b);
+                        }
+                        return document.write("Нельзя делить на 0");
+                    }
+                    default: {
+                        return document.write("Такое арефмитического знака не существует");
+                    }
+                }
+            }
+        }
+        var a1=prompt("Введите 1 число");
+        var c = prompt("Введите арифметический знак");
+        var b1= prompt("Введите 2 число ");
+        var a = parseInt(a1);
+        var b = parseInt(b1);
+        oper(a,b,c);
+    </script>
+
+</head>
+<body>
+</body>
+</html>

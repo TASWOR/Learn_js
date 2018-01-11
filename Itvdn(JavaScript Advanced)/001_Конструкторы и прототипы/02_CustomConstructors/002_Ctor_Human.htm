@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+    <title>Пользовательский конструктор 2</title>
+
+    <script type="text/javascript">
+    function People(name) {
+        this.name=name;
+        this.hello = function () {
+            document.write("Hello " + this.name + "</br>");
+        }
+    }
+    var vol9 = new People("Volia");
+    var dima = new People("Dima");
+    vol9.hello();
+    dima.hello();
+    </script>
+
+</head>
+<body>
+</body>
+</html>
